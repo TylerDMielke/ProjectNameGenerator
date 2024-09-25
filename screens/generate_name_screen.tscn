@@ -1,0 +1,112 @@
+[gd_scene load_steps=4 format=3 uid="uid://nbm1j87gqrmj"]
+
+[ext_resource type="PackedScene" uid="uid://fkvtoyyowcou" path="res://ui_elements/menu_bar.tscn" id="1_b02wd"]
+[ext_resource type="Script" path="res://screens/generate_name_screen.gd" id="1_k5nhi"]
+[ext_resource type="PackedScene" uid="uid://dlpdcd17k66l5" path="res://screens/about_popup.tscn" id="2_h3m5b"]
+
+[node name="GenerateNameScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k5nhi")
+
+[node name="AboutPopup" parent="." instance=ExtResource("2_h3m5b")]
+visible = false
+
+[node name="UIBackground" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuBar" parent="UIBackground" instance=ExtResource("1_b02wd")]
+layout_mode = 1
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+screen_name = "Generate Name "
+
+[node name="ControlsContainer" type="VBoxContainer" parent="UIBackground"]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 222.0
+offset_right = 816.0
+offset_bottom = 389.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="OptionsContainer" type="VBoxContainer" parent="UIBackground/ControlsContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="OutputContainer" type="HBoxContainer" parent="UIBackground/ControlsContainer/OptionsContainer"]
+layout_mode = 2
+
+[node name="GeneratorOutputLabel" type="Label" parent="UIBackground/ControlsContainer/OptionsContainer/OutputContainer"]
+layout_mode = 2
+text = "Generated Name:"
+
+[node name="GeneratorOutputEdit" type="LineEdit" parent="UIBackground/ControlsContainer/OptionsContainer/OutputContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/minimum_character_width = 20
+editable = false
+
+[node name="ToggleCenterContainer" type="CenterContainer" parent="UIBackground/ControlsContainer/OptionsContainer"]
+layout_mode = 2
+
+[node name="ToggleContainer" type="HBoxContainer" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="UsePrefixContainer" type="HBoxContainer" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/UsePrefixContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Use Prefix:"
+
+[node name="UsePrefixCheckBox" type="CheckBox" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/UsePrefixContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+flat = true
+
+[node name="UsePostfixContainer" type="HBoxContainer" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/UsePostfixContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Use Postfix:"
+
+[node name="UsePostfixCheckBox" type="CheckBox" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/UsePostfixContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+flat = true
+
+[node name="AppendNumberContainer" type="HBoxContainer" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/AppendNumberContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Append Number:"
+
+[node name="AppendNumberCheckBox" type="CheckBox" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/AppendNumberContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+flat = true
+
+[node name="GenerateButton" type="Button" parent="UIBackground/ControlsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Generate"

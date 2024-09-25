@@ -1,0 +1,37 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="random-game-name-generator"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/image="res://Sprite-0001.png"
+config/icon="res://Sprite-0001.png"
+config/windows_native_icon="res://Sprite-0001.ico"
+
+[autoload]
+
+Constants="*res://globals/constants.gd"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=514
+window/size/resizable=false
+
+[gui]
+
+theme/custom="res://addons/windows_95_theme/save1.tres"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://fkvtoyyowcou"]
+
+[ext_resource type="Script" path="res://ui_elements/menu_bar.gd" id="1_awstx"]
+[ext_resource type="Theme" uid="uid://cnjtetudthuan" path="res://addons/windows_95_theme/save1.tres" id="1_fwic5"]
+
+[node name="MenuBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_awstx")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_direction = 3
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 41.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_bottom = 4
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ScreenLabel" type="Label" parent="MarginContainer/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "{Screen Name}"
+
+[node name="ButtonContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 4
+
+[node name="MenuBar" type="MenuBar" parent="ButtonContainer"]
+layout_mode = 2
+theme = ExtResource("1_fwic5")
+theme_override_constants/h_separation = 5
+
+[node name="File" type="PopupMenu" parent="ButtonContainer/MenuBar"]
+
+[node name="Edit" type="PopupMenu" parent="ButtonContainer/MenuBar"]
+
+[node name="Help" type="PopupMenu" parent="ButtonContainer/MenuBar"]
