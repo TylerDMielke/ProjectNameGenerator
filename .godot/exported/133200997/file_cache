@@ -1,0 +1,10 @@
+res://main.tscn::9cb679df14181534b459b259db52a8fc::1727300181::res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn
+res://addons/windows_95_theme/save1.tres::d0ab4ac5aa2404777d48404d17f6df5f::1727279694::res://.godot/exported/133200997/export-27ce54e89da507a553e98839f104d62e-save1.res
+res://layouts/generate_name_layout.tscn::48bc7c4361be72fa158f8dba3c103f17::1726614696::res://.godot/exported/133200997/export-f704aaaa358cb9847b3252ca59946ef7-generate_name_layout.scn
+res://layouts/generate_name_prefix_layout.tscn::fd488347c1f164ba640bd70201bc37de::1726680934::res://.godot/exported/133200997/export-e69f90d1b6779b56513bcac8cd14beed-generate_name_prefix_layout.scn
+res://screens/about_popup.tscn::e5041c92ac4c448601d638a854716f66::1726620998::res://.godot/exported/133200997/export-99888b39197f06e047457dab59985078-about_popup.scn
+res://screens/generate_name_name_screen.tscn::fb6c4e6d5b7761804cdf20398c43ec3b::1726901902::res://.godot/exported/133200997/export-dc1a270d5d9c1ea12ac65de33c99158d-generate_name_name_screen.scn
+res://screens/generate_name_postfix_screen.tscn::ce8dc5c8380bdeb6f3bb2b790cc92716::1726901902::res://.godot/exported/133200997/export-e9e2b825052e9ffc2c588973a5e2ab12-generate_name_postfix_screen.scn
+res://screens/generate_name_prefix_screen.tscn::a7bab74187d1433a14bf88d3017f104b::1726901902::res://.godot/exported/133200997/export-6b33d4872a7f772563b9520a96fd22ca-generate_name_prefix_screen.scn
+res://screens/generate_name_screen.tscn::e8a69bd21d1dd2b2d1c5e5d02149d1a2::1727300181::res://.godot/exported/133200997/export-ccc85e2566786408c823b5fd88670d49-generate_name_screen.scn
+res://ui_elements/menu_bar.tscn::9e898a89be7a7688dec4fb7d01c02ff2::1726901902::res://.godot/exported/133200997/export-b8ba0ddf75cfed9b3465cd7198f773e2-menu_bar.scn

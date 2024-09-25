@@ -1,0 +1,6 @@
+res://services/name_generator_service.gd
+res://main.gd
+res://screens/generate_name_screen.gd
+res://main.tscn
+res://addons/windows_95_theme/save1.tres
+res://screens/generate_name_screen.tscn
