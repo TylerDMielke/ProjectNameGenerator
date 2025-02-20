@@ -9,6 +9,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k5nhi")
@@ -24,88 +26,96 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MenuBar" parent="UIBackground" instance=ExtResource("1_b02wd")]
+[node name="VBoxContainer" type="VBoxContainer" parent="UIBackground"]
 layout_mode = 1
-offset_left = -1.0
-offset_top = -1.0
-offset_right = -1.0
-offset_bottom = -1.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIBackground/VBoxContainer"]
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 2
+
+[node name="MenuBar" parent="UIBackground/VBoxContainer/MarginContainer" instance=ExtResource("1_b02wd")]
+layout_mode = 2
 screen_name = "Generate Name "
 
-[node name="ControlsContainer" type="VBoxContainer" parent="UIBackground"]
-layout_mode = 0
-offset_left = 231.0
-offset_top = 222.0
-offset_right = 816.0
-offset_bottom = 389.0
+[node name="CenterContainer" type="CenterContainer" parent="UIBackground/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ControlsContainer" type="VBoxContainer" parent="UIBackground/VBoxContainer/CenterContainer"]
+layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 40
 
-[node name="OptionsContainer" type="VBoxContainer" parent="UIBackground/ControlsContainer"]
+[node name="OptionsContainer" type="VBoxContainer" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer"]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="OutputContainer" type="HBoxContainer" parent="UIBackground/ControlsContainer/OptionsContainer"]
+[node name="OutputContainer" type="HBoxContainer" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer/OptionsContainer"]
 layout_mode = 2
 
-[node name="GeneratorOutputLabel" type="Label" parent="UIBackground/ControlsContainer/OptionsContainer/OutputContainer"]
+[node name="GeneratorOutputLabel" type="Label" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer/OptionsContainer/OutputContainer"]
 layout_mode = 2
 text = "Generated Name:"
 
-[node name="GeneratorOutputEdit" type="LineEdit" parent="UIBackground/ControlsContainer/OptionsContainer/OutputContainer"]
+[node name="GeneratorOutputEdit" type="LineEdit" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer/OptionsContainer/OutputContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/minimum_character_width = 20
 editable = false
 
-[node name="ToggleCenterContainer" type="CenterContainer" parent="UIBackground/ControlsContainer/OptionsContainer"]
+[node name="ToggleCenterContainer" type="CenterContainer" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer/OptionsContainer"]
 layout_mode = 2
 
-[node name="ToggleContainer" type="HBoxContainer" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer"]
+[node name="ToggleContainer" type="HBoxContainer" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer/OptionsContainer/ToggleCenterContainer"]
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="UsePrefixContainer" type="HBoxContainer" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer"]
+[node name="UsePrefixContainer" type="HBoxContainer" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/UsePrefixContainer"]
+[node name="Label" type="Label" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/UsePrefixContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Use Prefix:"
 
-[node name="UsePrefixCheckBox" type="CheckBox" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/UsePrefixContainer"]
+[node name="UsePrefixCheckBox" type="CheckBox" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/UsePrefixContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 flat = true
 
-[node name="UsePostfixContainer" type="HBoxContainer" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer"]
+[node name="UsePostfixContainer" type="HBoxContainer" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/UsePostfixContainer"]
+[node name="Label" type="Label" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/UsePostfixContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Use Postfix:"
 
-[node name="UsePostfixCheckBox" type="CheckBox" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/UsePostfixContainer"]
+[node name="UsePostfixCheckBox" type="CheckBox" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/UsePostfixContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 flat = true
 
-[node name="AppendNumberContainer" type="HBoxContainer" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer"]
+[node name="AppendNumberContainer" type="HBoxContainer" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/AppendNumberContainer"]
+[node name="Label" type="Label" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/AppendNumberContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Append Number:"
 
-[node name="AppendNumberCheckBox" type="CheckBox" parent="UIBackground/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/AppendNumberContainer"]
+[node name="AppendNumberCheckBox" type="CheckBox" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer/OptionsContainer/ToggleCenterContainer/ToggleContainer/AppendNumberContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 flat = true
 
-[node name="GenerateButton" type="Button" parent="UIBackground/ControlsContainer"]
+[node name="GenerateButton" type="Button" parent="UIBackground/VBoxContainer/CenterContainer/ControlsContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4

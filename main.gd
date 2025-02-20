@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var minimum_window_size: Vector2i = Vector2i(600, 300)
+
 @onready var name_generator_screen = $CanvasLayer/GenerateNameScreen
 @onready var name_generator = $NameGeneratorService
 
@@ -7,6 +9,7 @@ extends Node2D
 func _ready():
 	name_generator.name_generated.connect(_on_name_generated)
 	name_generator_screen.generate_name.connect(_on_generate_name)
+	DisplayServer.window_set_min_size(minimum_window_size)
 
 
 func _process(_delta):

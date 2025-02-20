@@ -11,9 +11,12 @@ config_version=5
 [application]
 
 config/name="random-game-name-generator"
+config/tags=PackedStringArray("tool")
 run/main_scene="res://main.tscn"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+config/features=PackedStringArray("4.3", "GL Compatibility")
+boot_splash/show_image=false
 boot_splash/image="res://Sprite-0001.png"
+boot_splash/fullsize=false
 config/icon="res://Sprite-0001.png"
 config/windows_native_icon="res://Sprite-0001.ico"
 
@@ -25,7 +28,6 @@ Constants="*res://globals/constants.gd"
 
 window/size/viewport_width=1024
 window/size/viewport_height=514
-window/size/resizable=false
 
 [gui]
 
